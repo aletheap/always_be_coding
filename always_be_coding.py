@@ -16,7 +16,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 logger.addHandler(handler)
 
-VICTIM_FILE = "always_being_coded.py"
+VICTIM_FILE = "killer_feature.py"
 
 
 def be_coding():
@@ -27,7 +27,7 @@ def be_coding():
     with open(VICTIM_FILE, "w") as f:
         f.write("#!/usr/bin/env python\n" + "\n" + f"print({random.randint(0, 100)})\n")
 
-    commit_string = f'random code {time.strftime("%Y-%m-%d %H:%M:%S")}'
+    commit_string = f'burnign the {time.strftime("%I:%M:%S %p")} oil'
 
     logger.debug("Hey! Get back to work!")
     # always be sword fighting
