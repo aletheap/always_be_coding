@@ -2,4 +2,4 @@
 
 Show the world how hardcore you are by **always** coding.
 
-![Always Be Coding](Always_Be_Coding.png "Blaze your glory!")
+![Always Be Coding](killer_image.png "Blaze your glory!")

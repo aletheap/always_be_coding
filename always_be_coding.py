@@ -27,7 +27,7 @@ def be_coding():
     with open(VICTIM_FILE, "w") as f:
         f.write("#!/usr/bin/env python\n" + "\n" + f"print({random.randint(0, 100)})\n")
 
-    commit_string = f'burnign the {time.strftime("%I:%M:%S %p")} oil'
+    commit_string = f'burning the {time.strftime("%I:%M:%S %p")} oil'
 
     logger.debug("Hey! Get back to work!")
     # always be sword fighting
@@ -54,9 +54,11 @@ def sword_fight_while_code_compiles(error_code):
         s = wait - (h * 60 * 60) - (m * 60)
         print(f"{h:>01}:{m:>02}:{s:>02}", end="\r")
         time.sleep(1)
+        break
 
 
 always = True
 
 while always:
     be_coding()
+    break
