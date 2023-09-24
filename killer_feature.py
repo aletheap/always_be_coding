@@ -1,3 +1,3 @@
 #!/usr/bin/env python
 
-print(10)
+print(86)
