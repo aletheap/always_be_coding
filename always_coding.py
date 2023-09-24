@@ -34,7 +34,7 @@ def be_coding():
     sword_fight_while_code_compiles(error_code=303)
 
     logger.debug("Committed. Whew!")
-    subprocess.run(["git", "add", "random_code.py"])
+    subprocess.run(["git", "add", VICTIM_FILE])
     subprocess.run(["git", "commit", "-m", commit_string])
     subprocess.run(["git", "push"])
 
