@@ -1,3 +1,3 @@
 #!/usr/bin/env python
 
-print(18)
+print(10)
