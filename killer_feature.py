@@ -1,3 +1,3 @@
 #!/usr/bin/env python
 
-print(99)
+print(17)

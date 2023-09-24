@@ -10,8 +10,8 @@ import sys
 import time
 
 VICTIM_FILE = "killer_feature.py"
-MIN_COMPILE_TIME = 2 * 60 * 60
-MAX_COMPILE_TIME = 6 * 60 * 60
+MIN_COMPILE_TIME = 1 * 60 * 60
+MAX_COMPILE_TIME = 4 * 60 * 60
 
 
 def be_coding():
@@ -19,11 +19,11 @@ def be_coding():
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
     with open(VICTIM_FILE, "w") as f:
-        f.write("#!/usr/bin/env python\n" + \
-                "\n" + \
-                f"print({random.randint(0, 100)})\n")
+        f.write("#!/usr/bin/env python\n")
+        f.write("\n")
+        f.write(f"print({random.randint(0, 100)})\n")
 
-    commit_string = f'burning the {time.strftime("%I:%M:%S %p")} oil'
+    commit_string = f'burning the {time.strftime("%I:%M %p")} oil'
 
     subprocess.run(["git", "add", VICTIM_FILE])
     subprocess.run(["git", "commit", "-m", commit_string])
