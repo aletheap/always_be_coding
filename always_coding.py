@@ -41,6 +41,7 @@ def be_coding():
 
 def sword_fight_while_code_compiles(error_code):
     logger.debug(f"I'm Compiling!")
+
     assert error_code == 303, "Compile error!"
 
     min_hours = 2
@@ -53,11 +54,9 @@ def sword_fight_while_code_compiles(error_code):
         s = wait - (h * 60 * 60) - (m * 60)
         print(f"{h:>01}:{m:>02}:{s:>02}", end="\r")
         time.sleep(1)
-        break
 
 
 always = True
 
 while always:
     be_coding()
-    break
