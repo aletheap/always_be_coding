@@ -21,12 +21,12 @@ def be_coding():
     with open(VICTIM_FILE, "w") as f:
         f.write("#!/usr/bin/env python\n" + "\n" + f"print({random.randint(0, 100)})\n")
 
-    sword_fight_while_code_compiles()
-
     subprocess.run(["git", "add", VICTIM_FILE])
     commit_string = f'burning the {time.strftime("%I:%M:%S %p")} oil'
     subprocess.run(["git", "commit", "-m", commit_string])
     subprocess.run(["git", "push"])
+
+    sword_fight_while_code_compiles()
 
 
 def sword_fight_while_code_compiles():
