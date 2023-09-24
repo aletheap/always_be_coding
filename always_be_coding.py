@@ -19,10 +19,13 @@ def be_coding():
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
     with open(VICTIM_FILE, "w") as f:
-        f.write("#!/usr/bin/env python\n" + "\n" + f"print({random.randint(0, 100)})\n")
+        f.write("#!/usr/bin/env python\n" + \
+                "\n" + \
+                f"print({random.randint(0, 100)})\n")
+
+    commit_string = f'burning the {time.strftime("%I:%M:%S %p")} oil'
 
     subprocess.run(["git", "add", VICTIM_FILE])
-    commit_string = f'burning the {time.strftime("%I:%M:%S %p")} oil'
     subprocess.run(["git", "commit", "-m", commit_string])
     subprocess.run(["git", "push"])
 
