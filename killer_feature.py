@@ -1,3 +1,3 @@
 #!/usr/bin/env python
 
-print(69)
+print(8)
