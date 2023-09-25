@@ -13,10 +13,11 @@ MAX_COMPILE_TIME = 4 * 60 * 60
 
 CODE = """#!/usr/bin/env python
 
+# Number generated randomly on {} at {}.
+RANDOM_NUMBER = {}
+
 def get_random_number(xkcd=221):
-    # Number randomly generated on
-    # {} at {}.
-    return xkcd + {}
+    return RANDOM_NUMBER + xkcd
 
 if __name__ == "__main__":
     print(get_random_number())
