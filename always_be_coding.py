@@ -11,8 +11,7 @@ MIN_COMPILE_TIME = 1 * 60 * 60
 MAX_COMPILE_TIME = 4 * 60 * 60
 
 
-CODE = """
-#!/usr/bin/env python
+CODE = """#!/usr/bin/env python
 
 def get_random_number(xkcd=221):
     # Number randomly generated on
