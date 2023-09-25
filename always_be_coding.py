@@ -13,11 +13,13 @@ MAX_COMPILE_TIME = 4 * 60 * 60
 
 CODE = """#!/usr/bin/env python
 
-# Number generated randomly on {} at {}.
-RANDOM_NUMBER = {}
+XKCD = 221
 
-def get_random_number(xkcd=221):
-    return RANDOM_NUMBER + xkcd
+def get_random_number():
+    # generated randomly on {}
+    random_number = {}
+
+    return random_number * XKCD
 
 if __name__ == "__main__":
     print(get_random_number())
@@ -31,9 +33,8 @@ def be_coding():
     with open(VICTIM_FILE, "w") as f:
         f.write(
             CODE.format(
-                time.strftime("%Y-%m-%d"),
-                time.strftime("%I:%M:%S %p"),
-                random.randint(1, 1000),
+                time.strftime("%B %d, %Y"),
+                random.random(),
             )
         )
 
