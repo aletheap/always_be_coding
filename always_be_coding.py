@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 import os
 import random
 import subprocess
@@ -32,7 +31,9 @@ def be_coding():
     with open(VICTIM_FILE, "w") as f:
         f.write(
             CODE.format(
-                time.strftime("%Y-%m-%d"), time.strftime("%I:%M:%S %p"), random.randint(1, 1000)
+                time.strftime("%Y-%m-%d"),
+                time.strftime("%I:%M:%S %p"),
+                random.randint(1, 1000),
             )
         )
 
