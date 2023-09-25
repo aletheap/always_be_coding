@@ -1,12 +1,10 @@
+
 #!/usr/bin/env python
 
-XKCD = 221
-
-def get_random_number():
-    # generated randomly on September 24, 2023
-    random_number = 0.07061738215995739
-
-    return random_number * XKCD
+def get_random_number(xkcd=221):
+    # Number randomly generated on
+    # 2023-09-24 at 09:25:13 PM.
+    return xkcd + 901
 
 if __name__ == "__main__":
     print(get_random_number())
