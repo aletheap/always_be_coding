@@ -2,11 +2,9 @@
 # coding: utf-8
 
 
-import logging
 import os
 import random
 import subprocess
-import sys
 import time
 
 VICTIM_FILE = "killer_feature.py"
